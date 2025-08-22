@@ -10,5 +10,18 @@ class Person{
     console.log(`Name: ${this.name}, Age: ${this.age}`);
   }
 }
-const p1 = new Person("Toan", 18);
-p1.displayInfo();
+
+class student extends Person{
+    grade: String;
+
+    constructor(name:String, age:number, grade: String){
+        super(name, age);
+        this.grade = grade;
+    }
+    displayInfo(): void {
+        console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
+        
+    }
+}
+const s1 = new student("Toan", 18, "B");
+s1.displayInfo();
