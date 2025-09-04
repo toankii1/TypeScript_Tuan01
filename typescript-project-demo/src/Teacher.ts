@@ -1,19 +1,10 @@
-import { Person } from "./person";
-
-export class Teacher extends Person {
+export class Teacher {
   constructor(
-    name: string,
-    age: number,
+    public name: string,
     public subject: string
-  ) {
-    super(name, age);
-  }
+  ) {}
 
-  introduce(): string {
-    return `Hello, my name is ${this.name}, I am ${this.age} years old and I teach ${this.subject}.`;
+  showInfo(): void {
+    console.log(`Teacher: ${this.name}, Subject: ${this.subject}`);
   }
 }
-
-
-const teacher = new Teacher("toan", 21, "Math");
-console.log(teacher.introduce());

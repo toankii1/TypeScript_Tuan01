@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const School_1 = require("./School");
+const Student_1 = require("./Student");
+const Teacher_1 = require("./Teacher");
+const school = new School_1.School();
+const student1 = new Student_1.Student("toan", 21);
+const student2 = new Student_1.Student("an", 21);
+school.addStudent(student1);
+school.addStudent(student2);
+const teacher1 = new Teacher_1.Teacher("toan", "Math");
+const teacher2 = new Teacher_1.Teacher("an", "Physics");
+school.addTeacher(teacher1);
+school.addTeacher(teacher2);
+school.displayInfo();
