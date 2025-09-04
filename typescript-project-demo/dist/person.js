@@ -1,21 +1,13 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Person = void 0;
 class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-    displayInfo() {
-        console.log(`Name: ${this.name}, Age: ${this.age}`);
+    introduce() {
+        return `Hello, my name is ${this.name}, I am ${this.age} years old.`;
     }
 }
-class student extends Person {
-    constructor(name, age, grade) {
-        super(name, age);
-        this.grade = grade;
-    }
-    displayInfo() {
-        console.log(`Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`);
-    }
-}
-const s1 = new student("Toan", 18, "B");
-s1.displayInfo();
+exports.Person = Person;
