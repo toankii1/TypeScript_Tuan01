@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Book = void 0;
 class Book {
     constructor(title, author, year) {
         this.title = title;
@@ -9,7 +11,4 @@ class Book {
         return `${this.title} - ${this.author} (${this.year})`;
     }
 }
-const book1 = new Book("Sach ve typescript", "Thay Thuan", 1950);
-const book2 = new Book("Sach ve typescript 2", "Thay Tien", 1951);
-console.log(book1.getInfo());
-console.log(book2.getInfo());
+exports.Book = Book;
